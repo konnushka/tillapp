@@ -48,9 +48,10 @@ check(){
   let x = bank+refund+other;
   let y : number =oldtotal
   let sum = oldtotal-bank-refund-other;
-  console.log(sum,y,oldtotal,bank,refund,other);
+  //console.log(sum,y,oldtotal,bank,refund,other);
   cash.innerHTML = "$ "+sum;
   credit.innerHTML = "$ "+refund;
+  ////
 
   }
 
