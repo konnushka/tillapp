@@ -1,0 +1,90 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pay Boss</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-8><p>Cash To Pay Boss</p></ion-col>
+      <ion-col col-4><p id="cashtopay">$0.00</p></ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col col-8><p>Credit Card Charges -></p></ion-col>
+      <ion-col col-4> <p id="creditpayment">$0.00</p></ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+  <!--total order-->
+  <ion-row>
+    <ion-col col-8><p>Total Order Payment -> </p></ion-col>
+    <ion-col col-4>
+      <ion-input type="number" placeholder="Enter Amount "#totalorderpayment>
+      </ion-input>
+    </ion-col>
+  </ion-row>
+
+    <!--refund order-->
+    <ion-row>
+      <ion-col col-8><p>Refund Payment -> </p></ion-col>
+      <ion-col col-4>
+        <ion-input type="number" placeholder="Enter Amount "#refundpayment>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+      <!--sys val order-->
+      <ion-row>
+        <ion-col col-8><p>System Visa Payment -> </p></ion-col>
+        <ion-col col-4>
+          <ion-input type="number" placeholder="Enter Amount "#systemvisapayment>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+        <!--bank payments order-->
+        <ion-row>
+          <ion-col col-8><p>Bank Visa Payment -> </p></ion-col>
+          <ion-col col-4>
+            <ion-input type="number" placeholder="Enter Amount "#bankvisapayment>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+
+        <!--other payment order-->
+        <ion-row>
+          <ion-col col-8><p>Other Payment -> </p></ion-col>
+          <ion-col col-4>
+            <ion-input type="number" placeholder="Enter Amount "#otherpayment>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-12>
+        <button ion-button color="light" type="button" name="button" (click)="paybossfunc()">Cash It</button>
+      </ion-col>
+        </ion-row>
+
+
+
+</ion-grid>
+
+
+
+
+
+</ion-content>

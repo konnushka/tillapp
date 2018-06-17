@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Till
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <!--display the total at the top-->
+    <ion-row>
+      <ion-col col-8>
+        <p>The Total is -></p>
+      </ion-col>
+      <ion-col col-4>
+        <p id="tilltotal">$0.00</p>
+      </ion-col>
+
+    </ion-row>
+
+      <!--row for 50-->
+
+    <ion-row>
+      <ion-col col-4> <p> 50  x  </p> </ion-col>
+      <ion-col col-4>
+        <ion-input type="number" placeholder="Number" #v50>
+        </ion-input>
+      </ion-col>
+      <ion-col col-4 #val50><p id="a50"> $0.00 </p></ion-col>
+    </ion-row>
+
+    <!--row for 20-->
+
+  <ion-row>
+    <ion-col col-4> <p> 20  x  </p> </ion-col>
+    <ion-col col-4>
+      <ion-input type="number" placeholder="Number" #v20>
+      </ion-input>
+    </ion-col>
+    <ion-col col-4 #val20><p id="a20"> $0.00 </p></ion-col>
+  </ion-row>
+
+  <!--row for 10-->
+
+<ion-row>
+  <ion-col col-4> <p> 10  x  </p> </ion-col>
+  <ion-col col-4>
+    <ion-input type="number" placeholder="Number" #v10>
+    </ion-input>
+  </ion-col>
+  <ion-col col-4 #val10><p id="a10"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 5-->
+
+<ion-row>
+<ion-col col-4> <p> 05  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v5>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val5><p id="a5"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 2-->
+
+<ion-row>
+<ion-col col-4> <p> 02  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v2>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val2><p id="a2"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 1-->
+
+<ion-row>
+<ion-col col-4> <p> 01  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v1>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val1><p id="a1"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 50 cent-->
+
+<ion-row>
+<ion-col col-4> <p>.50  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v50c>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val50c><p id="a50c"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 25 cent-->
+
+<ion-row>
+<ion-col col-4> <p>.25  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v25c>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val25c><p id="a25c"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 10 cent-->
+
+<ion-row>
+<ion-col col-4> <p>.10  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v10c>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val10c><p id="a10c"> $0.00 </p></ion-col>
+</ion-row>
+
+<!--row for 05 cent-->
+
+<ion-row>
+<ion-col col-4> <p>.05  x  </p> </ion-col>
+<ion-col col-4>
+  <ion-input type="number" placeholder="Number" #v05c>
+  </ion-input>
+</ion-col>
+<ion-col col-4 #val05c><p id="a05c"> $0.00 </p></ion-col>
+</ion-row>
+
+      <!--add all button -->
+    <ion-row>
+    <button ion-button color="light" type="button" name="button" (click)="addbtn()">Click Me</button>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
