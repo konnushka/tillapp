@@ -35,22 +35,25 @@ check(){
   let credit = document.getElementById("creditpayment");
 
   if (system > bank){
+    let sb:number = system-bank;
+    let sum2:number = bank + refund + other;
+    let sumtotal:number = sb - sum2;
+    let newtotal= oldtotal - sumtotal ;
 
-    let newtotal= (oldtotal -(system - bank))-(bank+refund+other);
-    //console.log(newtotal);
     //get html content
 
     cash.innerHTML = "$ "+newtotal;
     credit.innerHTML = "$ "+bank;
+    console.log(newtotal,oldtotal,sb,sumtotal,sum2);
   }
   else{
   //solution here
   let x = bank+refund+other;
   let y : number =oldtotal
   let sum = oldtotal-bank-refund-other;
-  //console.log(sum,y,oldtotal,bank,refund,other);
+  console.log(sum,y,oldtotal,bank,refund,other);
   cash.innerHTML = "$ "+sum;
-  credit.innerHTML = "$ "+refund;
+  credit.innerHTML = "$ "+bank;
   ////
 
   }
