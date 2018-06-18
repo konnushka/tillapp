@@ -2,8 +2,9 @@ import { NgModule, ErrorHandler} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule,AngularFireDatabase } from 'angularfire2/database';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { DataPage } from '../pages/data/data';
 import { TillPage } from '../pages/till/till';
@@ -35,7 +36,7 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
-    AngularFireModule.initilizeApp(config)
+    AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,6 +49,8 @@ var config = {
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
+    AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
