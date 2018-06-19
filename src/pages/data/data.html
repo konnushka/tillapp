@@ -10,13 +10,19 @@
 
 <ion-card *ngFor="let item of arrDatahead; let i = index">
     <ion-card-header>
-      {{item.date}}
+      Date: {{item.date}}
     </ion-card-header>
       <ion-card-content>
-        <p>Cash :{{item.cash}}</p>
-        <p>Banked :{{item.bank}}</p>
-        <p >Total :{{item.total}}</p>
         <ion-grid>
+          <ion-row>
+          <ion-col col-12 align-self: center><p>Cash Earned :{{item.cash}}</p></ion-col>
+          </ion-row>
+          <ion-row>
+        <ion-col col-12 align-self: center><p>Banked Cash:{{item.bank}}</p></ion-col>
+          </ion-row>
+          <ion-row>
+        <ion-col col-12 align-self: center><p >Total Earned:{{item.total}}</p></ion-col>
+      </ion-row>
           <ion-row>
             <ion-col col-6>
                  <button (click)="removeTask(item.$key)"ion-button  color="danger" full> Delete </button>
