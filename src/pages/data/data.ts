@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AngularFireDatabase,FirebaseListObservable } from 'angularfire2/database';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+import { Vibration } from '@ionic-native/vibration';
 
 @Component({
   selector: 'page-data',
@@ -21,7 +21,7 @@ paysum: FirebaseListObservable<any[]>;
 
 
 
-  constructor(public navCtrl: NavController, private fdb: AngularFireDatabase,private socialSharing: SocialSharing) {
+  constructor(public navCtrl: NavController, private vibration: Vibration,private fdb: AngularFireDatabase,private socialSharing: SocialSharing) {
 
     this.paysum = fdb.list('/paysum');
 
@@ -41,7 +41,8 @@ paysum: FirebaseListObservable<any[]>;
   }
 
 share(x,y,z,p){
-
+  //vibrate when button pressed
+  this.vibration.vibrate(1000);
   this.socialSharing.share(x,y,z,p).then(() => {
     // Sharing via email is possible
   }).catch(() => {
@@ -54,6 +55,8 @@ share(x,y,z,p){
 removeTask(task){
 
   this.paysum.remove(task);
+  //button vibrate when touched feedback
+  this.vibration.vibrate(2000);
 
 }
 

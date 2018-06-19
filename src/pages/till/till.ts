@@ -24,6 +24,7 @@ export class TillPage {
 
   }
   addbtn(){
+  this.vibration.vibrate(1000);
   let a = this.add50();
   let b = this.add20();
   let c = this.add10();
@@ -36,6 +37,7 @@ export class TillPage {
       let i= this.add05c();
   let sum = a+b+c+d+e+f+g+h+i;
   document.getElementById("tilltotal").innerHTML = "$ "+sum;
+
 
   }
 

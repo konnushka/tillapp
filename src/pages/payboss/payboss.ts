@@ -35,6 +35,7 @@ getBusy(){
 
   //click function
 paybossfunc(){
+this.vibration.vibrate(1000);
 
 console.log('pay boss clicked');
 //run check

@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule,AngularFireDatabase } from 'angularfire2/database';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+import { Vibration } from '@ionic-native/vibration';
 import { DataPage } from '../pages/data/data';
 import { TillPage } from '../pages/till/till';
 import { PayBossPage } from '../pages/payboss/payboss';
@@ -50,6 +50,7 @@ var config = {
     StatusBar,
     SplashScreen,
     SocialSharing,
+    Vibration,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
